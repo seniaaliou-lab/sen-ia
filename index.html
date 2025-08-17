@@ -301,17 +301,27 @@
         .fade-in.appear { opacity: 1; transform: translateY(0); }
 
         /* Responsive Design */
-        @media (max-width: 992px) {
-            h1 { font-size: 2.8rem; }
-            h2 { font-size: 2rem; }
-            .about-content { flex-direction: column; }
-            
-            /* MODIFIÉ : Correction du fond pour mobile */
-            .contact { background: var(--primary-blue); }
-            .contact-wrapper { grid-template-columns: 1fr; }
-            
-            .contact-info, .contact-form { padding: 40px; }
-        }
+      @media (max-width: 992px) {
+          h1 { font-size: 2.8rem; }
+          h2 { font-size: 2rem; }
+          .about-content { flex-direction: column; }
+          .contact {
+          background: var(--primary-blue);
+          padding: 80px 0; /* MODIFIÉ : Réduction du padding vertical */
+          }
+          .contact-wrapper {
+             grid-template-columns: 1fr;
+          }
+    
+          .contact-info, .contact-form {
+          padding: 40px;
+          }
+    
+    /* AJOUT : Réduit l'espace sous le titre du formulaire sur mobile */
+          .contact-form h2 {
+           margin-bottom: 2rem; 
+           }
+       }
 
         @media (max-width: 768px) {
             .nav-links {
@@ -574,3 +584,4 @@
     </script>
 </body>
 </html>
+
